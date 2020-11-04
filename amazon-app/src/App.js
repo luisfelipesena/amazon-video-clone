@@ -170,12 +170,11 @@ function App() {
                         .then((dados) => {
                           if (dados.link) {
                             window.location.href = dados.link;
-                            setClicado(false);
                           } else {
-                            alert("Trailer não encontrado").then(() =>
-                              setClicado(false)
-                            );
+                            alert("Trailer não encontrado");
                           }
+
+                          setClicado(false);
                         });
                     }}
                   >
