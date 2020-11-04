@@ -34,6 +34,7 @@ function App() {
 
   React.useEffect(() => {
     if (form) {
+      setASeguir([]);
       fetch(`https://imdb-api.com/en/API/Search/k_zdh9dhch/${form}`)
         .then((res) => res.json())
         .then((dados) => {
