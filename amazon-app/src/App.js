@@ -172,8 +172,9 @@ function App() {
                             window.location.href = dados.link;
                             setClicado(false);
                           } else {
-                            alert("Trailer não encontrado");
-                            setClicado(false);
+                            alert("Trailer não encontrado").then(() =>
+                              setClicado(false)
+                            );
                           }
                         });
                     }}
