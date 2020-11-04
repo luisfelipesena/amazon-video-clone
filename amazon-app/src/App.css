@@ -42,6 +42,7 @@ body {
 .esquerda img {
   width: 100%;
   max-width: 112px;
+  min-width: 70px;
 }
 
 .esquerda ul {
@@ -65,6 +66,7 @@ body {
 .direita {
   display: flex;
   align-items: center;
+  margin-left: 1em;
 }
 
 .direita .input {
@@ -115,6 +117,14 @@ body {
   cursor: pointer;
 }
 
+.divPost {
+  flex: 0 1 1500px;
+}
+
+.post {
+  width: 100%;
+}
+
 .main .poster button {
   background-color: transparent;
   border: 0;
@@ -140,11 +150,12 @@ body {
   display: flex;
   flex-flow: row wrap;
   padding: 1em 0;
-  margin-left: -3.6em;
+  margin-left: -1em;
+  justify-content: space-evenly;
 }
 
 .main .filmes ul li {
-  margin-left: 3.6em;
+  margin-left: 1em;
   margin-top: 1em;
 }
 
@@ -168,4 +179,47 @@ h3 {
 
 .carregando {
   cursor: wait !important;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+  .header ul {
+    display: none !important;
+  }
+  .esquerda,
+  .direita {
+    flex: 0 1 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .direita > span,
+  .direita > img,
+  .poster {
+    display: none !important;
+  }
+  .input input {
+    width: 100%;
+    flex: 0 1 100px;
+  }
+  .filmes,
+  h3 {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .input {
+    display: none !important;
+  }
+  .esquerda a {
+    margin: 0;
+    padding-left: 1.5em;
+  }
+  .filmes {
+    padding: 2em 0 !important;
+  }
 }

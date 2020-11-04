@@ -27,8 +27,8 @@ function App() {
         for (let i = 0; i < filmes.length; i++) {
           tempFilmes.push(filmes[i]);
         }
-        setASeguir(tempFilmes.slice(0, 10));
-        setRecomendados(tempFilmes.slice(10));
+        setASeguir(tempFilmes.slice(0, 12));
+        setRecomendados(tempFilmes.slice(12, -4));
       });
   }, []);
 
@@ -54,7 +54,7 @@ function App() {
           for (let i = 0; i < filmes.length; i++) {
             tempFilmes.push(filmes[i]);
           }
-          setASeguir(tempFilmes.slice(0, 10));
+          setASeguir(tempFilmes.slice(0, 12));
         });
     }
   }, [form]);
@@ -131,7 +131,9 @@ function App() {
               alt="seta esquerda"
             ></img>
           </button>
-          <img src={post} alt="poster"></img>
+          <div className="divPost">
+            <img className="post" src={post} alt="poster"></img>
+          </div>
           <button
             onClick={() => {
               const index = imagensPost.indexOf(post);
