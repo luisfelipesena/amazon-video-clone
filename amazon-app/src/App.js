@@ -19,9 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* < Header setASeguir=setASeguir */}
       <Header setASeguir={setASeguir}></Header>
-
       <div className="main">
         <div className="poster">
           <button
