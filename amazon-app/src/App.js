@@ -80,7 +80,7 @@ function App() {
                         .then((res) => res.json())
                         .then((dados) => {
                           if (dados.link) {
-                            window.location.href = dados.link;
+                            window.open(dados.link);
                           } else {
                             alert("Trailer não encontrado");
                           }
